@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Supply Chain Security Dashboard</title>
+
+<meta http-equiv="refresh" content="5">
+
+<style>
+
+body{
+    background-color:#0f172a;
+    font-family:Arial;
+    color:white;
+    text-align:center;
+}
+
+h1{
+    color:#38bdf8;
+}
+
+.dashboard-box{
+    width:60%;
+    margin:auto;
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0px 0px 20px rgba(0,0,0,0.5);
+}
+
+.alert-count{
+    font-size:22px;
+    color:#facc15;
+}
+
+ul{
+    list-style:none;
+    padding:0;
+}
+
+li{
+    background:#7f1d1d;
+    margin:10px;
+    padding:10px;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.time{
+    color:#fca5a5;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>🛡 CI/CD Supply Chain Attack Detection</h1>
+
+<div class="dashboard-box">
+
+<h2 class="alert-count">Total Alerts: {{ alerts|length }}</h2>
+
+<ul>
+
+{% for alert in alerts %}
+
+<li>
+<span class="time">[{{ alert.time }}]</span>
+{{ alert.message }}
+</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+</body>
+</html>

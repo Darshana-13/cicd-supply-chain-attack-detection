@@ -1,0 +1,7 @@
+lines_changed,files_changed,dependency_changes,new_package,version_downgrade,label
+50,2,0,0,0,0
+120,4,1,0,0,0
+200,3,0,0,0,0
+800,12,3,1,0,1
+650,10,2,1,1,1
+
